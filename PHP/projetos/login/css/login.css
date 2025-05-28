@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #202020;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.cad {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.form1 {
+    background: #2c2c2c;
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+.form1 label {
+    font-weight: bold;
+    color: #ffffff;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form1 input[type="text"],
+.form1 input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border 0.3s ease;
+}
+
+.form1 input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.form1 button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px;
+    width: 100%;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form1 button:hover {
+    background-color: #0056b3;
+}
+
+.form1 h2 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: white; 
+    margin: 0 0 20px 0; 
+}
