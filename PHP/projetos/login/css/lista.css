@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.Lista {
+    width: 80%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.Lista th, .Lista td {
+    padding: 15px;
+    text-align: left;
+}
+
+.Lista th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.Lista tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.Lista tr:hover {
+    background-color: #e9f5ff;
+}
