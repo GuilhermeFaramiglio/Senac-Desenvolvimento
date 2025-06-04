@@ -1,0 +1,58 @@
+h1 {
+    display: flex;
+    font-size: 24px;
+    color: #003366;
+    margin-left: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+.logout {    
+    color: #0059b3;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.logout input[type=submit] {
+    /* background-color: transparent; */
+    /* border: none; */
+    width: 50px;
+    height: 22px;
+    color: #0059b3;
+    font-weight: bold;
+    cursor: pointer;    
+}
+
+.card {
+    width: 150px;
+    height: 200px;
+    background-color: #99ccff;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.card a {
+    text-decoration: none;    
+    display: inline-flex;
+    justify-content: center;
+    width: 150x;
+    height: 200px;
+}
+
+.card img {
+    display: flex;
+    width: 140px;
+    height: 140px;
+    margin-top: 30px;
+}
+
+.card p {
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+    font-size: 15px;
+    color: #003366;
+}

@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(212, 222, 255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    background-color: rgb(149, 149, 149);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    gap: 30px;
+    padding: 40px 20px;
+    background-color: #ffffff;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    width: auto;
+    height: 1500px;
+}
