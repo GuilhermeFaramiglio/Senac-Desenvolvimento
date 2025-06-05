@@ -1,3 +1,25 @@
+<?php
+
+include('utils/conectadb.php');
+session_start();
+
+if (isset($_SESSION['idfuncionario'])) {
+
+    $idfuncionario = $_SESSION['idfuncionario'];
+
+    $sql = "SELECT FUNC_NOME FROM funcionarios 
+        WHERE FUNC_ID = '$idfuncionario'";
+
+    $enviaquery = mysqli_query($link, $sql);
+    $nomeusuario = mysqli_fetch_array($enviaquery) [0];
+} 
+else {
+    echo "<script>alert('Usuário não logado!');</script>";
+    echo "<script>window.location.href = 'login.php';</script>";
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,7 +31,7 @@
 <body>
     <div>
         <header>
-            <h1>Bem vindo, Usuário!</h1>
+            <h1>Bem vindo, <?php echo$nomeusuario?></h1>
             <nav>
             <div class="logout" method='post'>
                 <form action='logout.php'>

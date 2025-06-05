@@ -1,6 +1,6 @@
 <?php
 
-include('<utils/conectadb.php');
+include('utils/conectadb.php');
 session_start();
 
 
@@ -31,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $enviaquery3 = mysqli_query($link, $sqlativo);
     $ativo = mysqli_fetch_array($enviaquery3) [0];
 
-    //validar o retorno se existe login e se ativo 
+    //validar o retorno se existe login e se ativo
     if ($retorno == 1 && $ativo == 1)
     {
         $_SESSION['idfuncionario'] = $idfuncionario;
@@ -65,10 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
            
             <h2> LOGIN </h2>
             <br>
-            <!-- <label> Usuário </label> -->
             <input type="text" name="txtUsuario" placeholder="Usuário" required>
-            <br>
-            <!-- <label> Senha </label> -->
             <input type="password" name="txtSenha" placeholder="Senha">
             <br>
             <br>
