@@ -53,12 +53,12 @@ else {
             </div>
 
             <div class="card">
-                <a href="#"><img src="icons/business.png" alt=""></a>
+                <a href="cadastro_funcionario.php"><img src="icons/business.png" alt=""></a>
                 <p>Cadastro de Funcionário</p>
             </div>
 
             <div class="card">
-                <a href="#"><img src="icons/group1.png" alt=""></a>
+                <a href="lista_funcionario.php"><img src="icons/group1.png" alt=""></a>
                 <p>Lista de Funcionários</p>
             </div>
         </main>
