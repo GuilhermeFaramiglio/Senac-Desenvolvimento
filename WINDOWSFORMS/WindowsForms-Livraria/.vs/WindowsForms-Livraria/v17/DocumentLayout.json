@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\guilherme.bfaramigli\\OneDrive - SENAC - SP\\Desenvolvimento\\UC12 - HUGO\\WindowsForms-Livraria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{032E63B0-16B8-404D-A884-10D5A51A8E07}|WindowsForms-Livraria\\WindowsForms-Livraria.csproj|c:\\users\\guilherme.bfaramigli\\onedrive - senac - sp\\desenvolvimento\\uc12 - hugo\\windowsforms-livraria\\windowsforms-livraria\\livros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{032E63B0-16B8-404D-A884-10D5A51A8E07}|WindowsForms-Livraria\\WindowsForms-Livraria.csproj|solutionrelative:windowsforms-livraria\\livros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{032E63B0-16B8-404D-A884-10D5A51A8E07}|WindowsForms-Livraria\\WindowsForms-Livraria.csproj|C:\\Users\\guilherme.bfaramigli\\OneDrive - SENAC - SP\\Desenvolvimento\\UC12 - HUGO\\WindowsForms-Livraria\\windowsforms-livraria\\livros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{032E63B0-16B8-404D-A884-10D5A51A8E07}|WindowsForms-Livraria\\WindowsForms-Livraria.csproj|solutionrelative:windowsforms-livraria\\livros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Livros.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\guilherme.bfaramigli\\OneDrive - SENAC - SP\\Desenvolvimento\\UC12 - HUGO\\WindowsForms-Livraria\\WindowsForms-Livraria\\Livros.cs",
+              "RelativeDocumentMoniker": "WindowsForms-Livraria\\Livros.cs",
+              "ToolTip": "C:\\Users\\guilherme.bfaramigli\\OneDrive - SENAC - SP\\Desenvolvimento\\UC12 - HUGO\\WindowsForms-Livraria\\WindowsForms-Livraria\\Livros.cs [Design]",
+              "RelativeToolTip": "WindowsForms-Livraria\\Livros.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T12:01:40.462Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Livros.cs",
+              "DocumentMoniker": "C:\\Users\\guilherme.bfaramigli\\OneDrive - SENAC - SP\\Desenvolvimento\\UC12 - HUGO\\WindowsForms-Livraria\\WindowsForms-Livraria\\Livros.cs",
+              "RelativeDocumentMoniker": "WindowsForms-Livraria\\Livros.cs",
+              "ToolTip": "C:\\Users\\guilherme.bfaramigli\\OneDrive - SENAC - SP\\Desenvolvimento\\UC12 - HUGO\\WindowsForms-Livraria\\WindowsForms-Livraria\\Livros.cs",
+              "RelativeToolTip": "WindowsForms-Livraria\\Livros.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAAFMBAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-09T12:08:00.202Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
