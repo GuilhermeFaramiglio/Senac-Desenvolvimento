@@ -2,16 +2,33 @@
 
 include('utils/conectadb.php');
 
+session_start();
+
+if (isset($_SESSION['idfuncionario'])) {
+
+    $idfuncionario = $_SESSION['idfuncionario'];
+
+    $sql = "SELECT FUNC_NOME FROM funcionarios 
+        WHERE FUNC_ID = '$idfuncionario'";
+
+    $enviaquery = mysqli_query($link, $sql);
+    $nomeusuario = mysqli_fetch_array($enviaquery) [0];
+} 
+else {
+    echo "<script>alert('Usuário não logado!');</script>";
+    echo "<script>window.location.href = 'login.php';</script>";
+}
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $_nomefuncionario = $POST ['txtNome'];
-    $_cpf = $POST ['txtCPF'];
-    $_funcao = $POST ['txtFuncao'];
-    $_telefone = $POST ['txtTelefone'];
-    $_ativo = $_POST['rbAtivo'];
+    $nomefuncionario = $_POST ['txtNome'];
+    $cpf = $_POST ['txtCPF'];
+    $funcao = $_POST ['txtFuncao'];
+    $telefone = $_POST ['txtTelefone'];
+    $ativo = $_POST['rbAtivo'];
 
-    $_usuario = $_POST['txtUsuario'];
-    $_senha = $_POST['txtSenha'];
+    $usuario = $_POST['txtUsuario'];
+    $senha = $_POST['txtSenha'];
 
     //verifica usuario e senha se existe
     $sql = "SELECT COUNT(FUNC_CPF) FROM funcionarios 
@@ -28,7 +45,30 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
     else 
     {
-        
+        // CASO FUNCIONÁRIO NÃO ESTEJA CADASTRADO
+        $sql = "INSERT INTO funcionarios (FUNC_NOME, FUNC_CPF, FUNC_FUNCAO, FUNC_TEL, FUNC_ATIVO)
+        VALUES ('$nomefuncionario', '$cpf', '$funcao', '$telefone', $ativo)";
+
+        // CONECTA COM O BANCO E MANDA A QUERY
+        $enviaquery = mysqli_query($link, $sql);
+
+        // ROLE COM A TABELA DE USUARIOS
+        // PERGUNTA PARA A TABELA DE FUNCIONÁRIO QUAL FOI O ULTIMO ID CADASTRADO
+        // ANTES PRECISO SABER SE A VARIÁVEL USUFUN ESTÁ PREENCHIDA
+        if($usuario != null){
+            // TRAZ O ID DO FUNCIONARIO CADASTRADO PARA PASSAR NO LOGIN
+            $sqlfun = "SELECT FUNC_ID FROM funcionarios where FUNC_CPF = '$cpf'";
+            $enviaquery = mysqli_query($link, $sqlfun);
+            $retorno = mysqli_fetch_array($enviaquery) [0];
+
+            // AGORA SALVAMOS TUDO NA TABELA DO USUARIO
+            $sqlusu = "INSERT INTO usuarios (USU_LOGIN, USU_SENHA, USU_FK_FUNC_ID, USU_ATIVO)
+            VALUES ('$usuario', '$senha', $retorno, $ativo)";
+            $enviaqueryusu = mysqli_query($link, $sqlusu);
+        }
+        echo ("<script>window.alert('Cadastro realizado com sucesso!');</script>");
+        echo "<script>window.location.href = 'backoffice.php';</script>";
+        exit();
     }
 }
 
@@ -48,19 +88,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <body>
         <form id="login" class="form1" action="cadastro_funcionario.php" method="post">
            
-            <h2> Cadastro de funcionários </h2>
+            <h2> Cadastro de funcionário </h2>
             <br>
             <input type="text" name="txtNome" placeholder="Nome do funcionário" required>
             <input type="text" name="txtCPF" placeholder="CPF" required>
             <input type="text" name="txtFuncao" placeholder="Função" required>
             <input type="number" name="txtTelefone" placeholder="Telefone" required>
+            <br>
+            <br>
+            <!-- AGORA CALASTRAMOS O USUARIO NO SISTEMA -->
+            <h2> Cadastro de usuário sistema</h2>
+            <input type='text' name='txtUsuario' placeholder='Usuário'>
+            <input type='password' name='txtSenha' placeholder='Senha'>
+            <br>
             <label>
                 <input type="radio" name="rbAtivo" value="1" checked required> Ativo
                 <input type="radio" name="rbAtivo" value="0" required> Inativo
             </label>
-            <input type="text" name="txtUsuario" placeholder="Usuário ID">
-            <input type="password" name="txtSenha" placeholder="Senha">
-            <br>
             <br>
             <button type="submit">Cadastrar</button>
         </form>    
