@@ -16,20 +16,6 @@ nav {
     gap: 15px;
 }
 
-.logout {    
-    color: #f0f0f0; 
-    font-weight: bold;
-    margin: 20px;
-}
-
-.logout input[type=submit] {
-    width: 50px;
-    height: 22px;
-    color: #262626;
-    font-weight: bold;
-    cursor: pointer;    
-}
-
 .card {
     width: 150px;
     height: 200px;

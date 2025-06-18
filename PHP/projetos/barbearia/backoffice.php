@@ -4,12 +4,8 @@ include('utils/conectadb.php');
 session_start();
 
 if (isset($_SESSION['idfuncionario'])) {
-
     $idfuncionario = $_SESSION['idfuncionario'];
-
-    $sql = "SELECT FUNC_NOME FROM funcionarios 
-        WHERE FUNC_ID = '$idfuncionario'";
-
+    $sql = "SELECT FUNC_NOME FROM funcionarios WHERE FUNC_ID = '$idfuncionario'";
     $enviaquery = mysqli_query($link, $sql);
     $nomeusuario = mysqli_fetch_array($enviaquery) [0];
 } 
@@ -34,9 +30,10 @@ else {
             <h1>Bem vindo, <?php echo$nomeusuario?></h1>
             <nav>
             <div class="logout" method='post'>
-                <form action='logout.php'>
-                    <input type="submit" value='SAIR'>
-                </form>
+                <!-- botão de sair -->
+            <form action='logout.php' method='post' class="me-2">
+            <input type="submit" value='Logoff'>
+            </form>
             </div>
             </nav>
         </header>
