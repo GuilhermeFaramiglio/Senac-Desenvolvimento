@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <input type="number" name="txtTelefone" placeholder="Telefone" required>
             <br>
             <br>
-            <!-- AGORA CALASTRAMOS O USUARIO NO SISTEMA -->
+            
             <h2> Cadastro de usuário sistema</h2>
             <input type='text' name='txtUsuario' placeholder='Usuário'>
             <input type='password' name='txtSenha' placeholder='Senha'>
