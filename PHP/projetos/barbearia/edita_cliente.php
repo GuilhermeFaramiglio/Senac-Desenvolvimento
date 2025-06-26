@@ -64,7 +64,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     mysqli_query($link, $sqlfun);
 
     echo "<script>alert('Cliente atualizado com sucesso!');</script>";
-     echo "<script>window.location.href = 'lista_cliente.php';</script>";
+    echo "<script>window.location.href = 'lista_cliente.php';</script>";
     exit();
 }
 
