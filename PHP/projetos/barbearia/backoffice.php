@@ -40,13 +40,13 @@ else {
         
         <main>
             <div class="card"> 
-                <a href="#"><img src="icons/add9.png" alt=""></a>
-                <p>Cadastro de Usuário</p>
+                <a href="cadastro_cliente.php"><img src="icons/add9.png" alt=""></a>
+                <p>Cadastro de Cliente</p>
             </div>
 
             <div class="card">
-                <a href="#"><img src="icons/th2.png" alt=""></a>
-                <p>Lista de Usuários</p>
+                <a href="lista_cliente.php"><img src="icons/th2.png" alt=""></a>
+                <p>Lista de Clientes</p>
             </div>
 
             <div class="card">

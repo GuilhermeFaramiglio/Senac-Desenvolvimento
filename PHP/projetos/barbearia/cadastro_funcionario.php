@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     //verifica usuario e senha se existe
     $sql = "SELECT COUNT(FUNC_CPF) FROM funcionarios 
-    WHERE FUNC_CPF = '$_cpf'";
+    WHERE FUNC_CPF = '$cpf'";
     
     $enviaquery = mysqli_query($link, $sql);
     $retorno = mysqli_fetch_array($enviaquery) [0];

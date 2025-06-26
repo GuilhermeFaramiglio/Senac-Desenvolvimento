@@ -19,7 +19,18 @@ else {
     echo "<script>window.location.href = 'login.php';</script>";
 }
 
-$id = $_GET['id'];
+//bloco de alteração para correção de ID inválido
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $id = isset($_POST['txtID']) ? intval($_POST['txtID']) : 0;
+} else {
+    $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+}
+
+if ($id <= 0) {
+    echo "<script>alert('ID inválido!');</script>";
+    echo "<script>window.location.href = 'lista_funcionario.php';</script>";
+    exit();
+}
 
 //preenche os campos do formulário com os dados do funcionario e usuario
 $sql = "SELECT * FROM funcionarios INNER JOIN usuarios ON USU_FK_FUNC_ID = FUNC_ID 
@@ -80,15 +91,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="css/cadastro_funcionario.css">
     <link rel="stylesheet" href="css/global.css">
     <title>Edição de funcionario</title>
-</head>
-
     <body>
         <form id="login" class="form1" action="edita_funcionario.php" method="post">
+            <input type="hidden" name="txtID" value="<?=$id?>">
             <h2> Edição de funcionário </h2>
             <br>
-            <input type="text" name="txtID" value="<?=$id?>" disabled>
             <input type="text" name="txtNome" value="<?=$nomefuncionario?>" required>
-            <input type="text" name="txtCPF" value="<?=$cpf?>" disabled required>
+            <input type="text" name="txtCPF" value="<?=$cpf?>" readonly required>
             <input type="text" name="txtFuncao" value="<?=$funcao?>" required>
             <input type="number" name="txtTelefone" value="<?=$telefone?>" required>
             <br>
