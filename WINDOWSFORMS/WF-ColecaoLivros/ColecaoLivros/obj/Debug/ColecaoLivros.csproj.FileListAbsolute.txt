@@ -1,0 +1,25 @@
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\bin\Debug\ColecaoLivros.exe.config
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\bin\Debug\ColecaoLivros.exe
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\bin\Debug\ColecaoLivros.pdb
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.csproj.AssemblyReference.cache
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.Form1.resources
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.Properties.Resources.resources
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.csproj.GenerateResource.cache
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.csproj.CoreCompileInputs.cache
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.exe
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.pdb
+C:\Users\guilh\OneDrive - SENAC - SP\Desenvolvimento\UC12 - HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.exe.config
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\bin\Debug\ColecaoLivros.exe.config
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\bin\Debug\ColecaoLivros.exe
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\bin\Debug\ColecaoLivros.pdb
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.csproj.AssemblyReference.cache
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.exe.config
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.Form1.resources
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.Properties.Resources.resources
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.csproj.GenerateResource.cache
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.csproj.CoreCompileInputs.cache
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.exe
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.pdb
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.Form2.resources
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.Form3.resources
+C:\Users\guilh\OneDrive - SENAC - SP\3DESENVOLVIMENTO\WindowsForms\UC12-HUGO\WF-ColecaoLivros\ColecaoLivros\obj\Debug\ColecaoLivros.Form4.resources
