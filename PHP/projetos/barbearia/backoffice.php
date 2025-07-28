@@ -40,6 +40,11 @@ else {
         
         <main>
             <div class="card"> 
+                <a href="cadastro_servico.php"><img src="icons/scissors.png" alt=""></a>
+                <p>Cadastro de Serviço</p>
+            </div>
+
+            <div class="card"> 
                 <a href="cadastro_cliente.php"><img src="icons/add9.png" alt=""></a>
                 <p>Cadastro de Cliente</p>
             </div>

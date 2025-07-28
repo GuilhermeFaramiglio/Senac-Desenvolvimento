@@ -44,3 +44,7 @@ body {
 .actions a:hover {
     background-color: #555555;
 }
+
+.filtro {
+    color: #ffffff;
+}
