@@ -1,6 +1,5 @@
 <?php
-include('utils/conectadb.php');
-session_start();
+include('../utils/conectadb.php');
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -8,24 +7,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $senha = $_POST['txtSenha'];
 
     //coleta do nome do funcionario
-    $sqlfun = "SELECT USU_FK_FUNC_ID FROM usuarios 
-    WHERE USU_LOGIN = '$usuario' AND USU_SENHA = '$senha'";
-    
-    $enviaquery2 = mysqli_query($link, $sqlfun);
-    $idfuncionario = mysqli_fetch_array($enviaquery2) [0];
+    $sqlcli = "SELECT CLI_ID FROM CLIENTES 
+    WHERE CLI_CPF = '$usuario' AND CLI_SENHA = '$senha'";
+
+    $enviaquery2 = mysqli_query($link, $sqlcli);
+    $idcliente = mysqli_fetch_array($enviaquery2) [0];
     
     //-------------------------------------------------------------------
 
     //verifica usuario e senha se existe
-    $sql = "SELECT COUNT(USU_ID) FROM usuarios 
-    WHERE USU_LOGIN = '$usuario' AND USU_SENHA = '$senha'";
-    
+    $sql = "SELECT COUNT(CLI_ID) FROM CLIENTES 
+    WHERE CLI_CPF = '$usuario' AND CLI_SENHA = '$senha'";
+
     $enviaquery1 = mysqli_query($link, $sql);
     $retorno = mysqli_fetch_array($enviaquery1) [0];
 
     //verifica se ativo ou não
-    $sqlativo = "SELECT USU_ATIVO FROM usuarios 
-    WHERE USU_LOGIN = '$usuario' AND USU_SENHA = '$senha'";
+    $sqlativo = "SELECT CLI_ATIVO FROM CLIENTES 
+    WHERE CLI_CPF = '$usuario' AND CLI_SENHA = '$senha'";
 
     $enviaquery3 = mysqli_query($link, $sqlativo);
     $ativo = mysqli_fetch_array($enviaquery3) [0];
@@ -33,17 +32,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     //validar o retorno se existe login e se ativo
     if ($retorno == 1 && $ativo == 1)
     {
-        $_SESSION['idfuncionario'] = $idfuncionario;
-        Header ("Location: backoffice.php");
+        $_SESSION['idcliente'] = $idcliente;
+        Header ("Location: catalogo.php");
     }
     else if ($retorno == 1 && $ativo == 0) {
         echo "<script>alert('Usuário inativo!');</script>";
-        echo "<script>window.location.href = 'login.php';</script>";
+        echo "<script>window.location.href = 'cli_login.php';</script>";
     } 
     else 
     {
         echo "<script>alert('Usuário ou senha incorretos!');</script>";
-        echo "<script>window.location.href = 'login.php';</script>";
+        echo "<script>window.location.href = 'cli_login.php';</script>";
     }
 }
 
@@ -55,16 +54,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Login</title>
 </head>
 
     <body>
-        <form id="login" class="form1" action="login.php" method="post">
+        <form id="login" class="form1" action="cli_login.php" method="post">
            
             <h2> LOGIN </h2>
             <br>
-            <input type="text" name="txtUsuario" placeholder="Usuário" required>
+            <input type="text" name="txtUsuario" placeholder="CPF" required>
             <input type="password" name="txtSenha" placeholder="Senha">
             <br>
             <br>

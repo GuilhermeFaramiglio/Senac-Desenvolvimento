@@ -1,11 +1,24 @@
 <?php
 include '../utils/conectadb.php';
+session_start();
 
-// fazer a validação de cliente logado futuramente
+// fazer a validação de cliente logado
+if (isset($_SESSION['idcliente'])) {
+    $idcliente = $_SESSION['idcliente'];
+    $query = "SELECT * FROM clientes WHERE CLI_ID = $idcliente";
+    $result = mysqli_query($link, $query);
+    if ($result) {
+    $cliente = mysqli_fetch_assoc($result);
+    $nomecliente = htmlspecialchars($cliente['CLI_NOME']);
+    } else {
+        $bemvindo = "Bem Vindo";
+    }
+}
 
+
+//coleta serviços
 $sql = "SELECT * FROM servicos WHERE SERV_ATIVO = 1";
 $enviaquery = mysqli_query($link, $sql);
-
 
 ?>
 
@@ -20,18 +33,28 @@ $enviaquery = mysqli_query($link, $sql);
 <body>
     <div>
         <header>
-            <!-- <h1>Bem vindo, <?php // echo$nomeusuario?></h1> -->
-            <h1>Catálogo de Serviços</h1>
-            <nav>
-            <div class="logout" method='post'>
-            <form action='../logout.php' method='post' class="me-2">
-            <input type="submit" value='Logoff'>
-            </form>
-            </div>
-            </nav>
+            <?php if (isset($nomecliente)) { ?>
+                <h1 class="mb-3">Bem vindo <?php echo $nomecliente; ?></h1>
+                <nav>
+                    <form action='../logout.php' method='post' class="d-inline">
+                        <button type="submit" class="btn btn-danger">Logoff</button>
+                    </form>
+                </nav>
+            <?php } else { ?>
+                <div>
+                    <h1 class="mb-3"><?php echo isset($bemvindo) ? $bemvindo : 'Bem Vindo'; ?></h1>
+                    <div>
+                        <a href="cli_login.php" class="btn btn-primary me-2">Login</a>
+                        <a href="cli_cadastro.php" class="btn btn-success">Cadastrar</a>
+                    </div>
+                </div>
+            <?php } ?>
         </header>
         
         <main class="catalogo">
+
+            <h3>Catálogo de Serviços</h3>
+            <br>
 
             <?php while($retorno = mysqli_fetch_assoc($enviaquery)){ ?>
             
