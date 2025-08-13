@@ -61,15 +61,18 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <body>
         <form id="login" class="form1" action="login.php" method="post">
-           
-            <h2> LOGIN </h2>
+
+            <h2> LOGIN FUNCIONÁRIO</h2>
             <br>
             <input type="text" name="txtUsuario" placeholder="Usuário" required>
             <input type="password" name="txtSenha" placeholder="Senha">
             <br>
-            <br>
             <button type="submit">Entrar</button>
+            <br>
+            <br>
+            <div style="text-align:center; margin-top:10px;">
+                <span>É cliente? <a href="area-cli/cli_login.php" class="cad" style="display:inline; color:#007bff; text-decoration:underline;">Login Aqui</a></span>
+            </div>
         </form>    
     </body>
-
 </html>

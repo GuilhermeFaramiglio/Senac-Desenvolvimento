@@ -36,7 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         exit();
     }
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -65,5 +64,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <button type="submit">Cadastrar</button>
         </form>    
     </body>
-
 </html>
